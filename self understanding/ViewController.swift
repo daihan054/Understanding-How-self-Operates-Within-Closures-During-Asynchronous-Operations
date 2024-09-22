@@ -14,8 +14,6 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         addUrlPreview(with: "bbc.com")
-        stackView.arrangedSubviews.forEach { $0.removeFromSuperview() }
-        addUrlPreview(with: "cnn.com")
     }
     
     func addUrlPreview(with urlString: String) {

@@ -21,10 +21,8 @@ class URLPreview: UIView {
         loader.startAnimating()
         DispatchQueue.main.asyncAfter(deadline: .now()+10.0) {
             DebugHelper.addLog(text: "[after api call] self is \(Unmanaged.passUnretained(self).toOpaque()), self.urlString is \(self.urlString)")
-            if self.urlString == "bbc.com" {
-                self.loader.stopAnimating()
-                self.label.text = "loaded and \(self.urlString)"
-            }
+            self.loader.stopAnimating()
+            self.label.text = "loaded and \(self.urlString)"
         }
     }
     
