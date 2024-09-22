@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="O3G-QG-Sq7" customClass="URLPreview" customModule="self_understanding" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fpx-J7-UVI">
+                    <rect key="frame" x="166.5" y="323" width="42" height="21"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="g6v-v1-aXg">
+                    <rect key="frame" x="177.5" y="354" width="20" height="20"/>
+                </activityIndicatorView>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="Gck-lh-BnQ"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="g6v-v1-aXg" firstAttribute="top" secondItem="fpx-J7-UVI" secondAttribute="bottom" constant="10" id="QI6-Nz-PRO"/>
+                <constraint firstItem="fpx-J7-UVI" firstAttribute="centerY" secondItem="O3G-QG-Sq7" secondAttribute="centerY" id="XKb-qj-Cuj"/>
+                <constraint firstItem="fpx-J7-UVI" firstAttribute="centerX" secondItem="O3G-QG-Sq7" secondAttribute="centerX" id="mls-wg-CHi"/>
+                <constraint firstItem="g6v-v1-aXg" firstAttribute="centerX" secondItem="O3G-QG-Sq7" secondAttribute="centerX" id="vU0-p4-8x5"/>
+            </constraints>
+            <connections>
+                <outlet property="label" destination="fpx-J7-UVI" id="5DU-6s-g0h"/>
+                <outlet property="loader" destination="g6v-v1-aXg" id="9z0-sz-7Wk"/>
+            </connections>
+            <point key="canvasLocation" x="139" y="74"/>
+        </view>
+    </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

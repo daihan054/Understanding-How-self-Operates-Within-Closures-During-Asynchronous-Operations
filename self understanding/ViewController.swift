@@ -9,11 +9,20 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    @IBOutlet weak var stackView: UIStackView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        addUrlPreview(with: "bbc.com")
+        stackView.arrangedSubviews.forEach { $0.removeFromSuperview() }
+        addUrlPreview(with: "cnn.com")
     }
-
-
+    
+    func addUrlPreview(with urlString: String) {
+        let urlPreview = URLPreview.fromNib()
+        stackView.addArrangedSubview(urlPreview)
+        urlPreview.configure(urlString: urlString)
+    }
+    
 }
 
