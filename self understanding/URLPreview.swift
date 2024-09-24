@@ -14,21 +14,17 @@ class URLPreview: UIView {
     
     var urlString: String?
     
-    func configure(urlString: String?) {
-        self.urlString = urlString
-        DebugHelper.addLog(text: "[before api call] self is \(Unmanaged.passUnretained(self).toOpaque()), self.urlString is \(self.urlString)")
+    func configure(urlPreviewData: URLPreviewData) {
+        DebugHelper.addLog(text: "[before api call] urlPreviewData is \(Unmanaged.passUnretained(urlPreviewData).toOpaque()) and urlString is \(urlPreviewData.fullUrl)")
         label.text = "loading api data"
         loader.startAnimating()
         DispatchQueue.main.asyncAfter(deadline: .now()+10.0) {
-            DebugHelper.addLog(text: "[after api call] self is \(Unmanaged.passUnretained(self).toOpaque()), self.urlString is \(self.urlString)")
-            if self.urlString == "bbc.com" {
-                self.loader.stopAnimating()
-                self.label.text = "loaded and \(self.urlString)"
-            }
+            DebugHelper.addLog(text: "[afterr api call] urlPreviewData is \(Unmanaged.passUnretained(urlPreviewData).toOpaque()) and urlString is \(urlPreviewData.fullUrl)")
+            self.loader.stopAnimating()
+            self.label.text = "loaded and \(urlPreviewData.fullUrl)"
+            NotificationCenter.default.post(name: .updateUI,
+                                            object: nil,
+                                            userInfo: ["urlPreviewData": urlPreviewData])
         }
-    }
-    
-    deinit {
-        DebugHelper.addLog(text: "self is deallocated, self is \(Unmanaged.passUnretained(self).toOpaque())")
     }
 }

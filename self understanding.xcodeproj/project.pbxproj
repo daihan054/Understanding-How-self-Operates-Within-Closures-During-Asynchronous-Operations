@@ -17,6 +17,8 @@
 		C79DE8AE2C9FD0F60006B790 /* URLPreview.swift in Sources */ = {isa = PBXBuildFile; fileRef = C79DE8AD2C9FD0F50006B790 /* URLPreview.swift */; };
 		C79DE8B02C9FD2C40006B790 /* URLPreview.xib in Resources */ = {isa = PBXBuildFile; fileRef = C79DE8AF2C9FD2C40006B790 /* URLPreview.xib */; };
 		C79DE8B22C9FD60E0006B790 /* DebugHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = C79DE8B12C9FD60E0006B790 /* DebugHelper.swift */; };
+		C79DE8B62CA25B710006B790 /* URLPreviewData.swift in Sources */ = {isa = PBXBuildFile; fileRef = C79DE8B52CA25B710006B790 /* URLPreviewData.swift */; };
+		C79DE8B82CA2603B0006B790 /* Notification+Name.swift in Sources */ = {isa = PBXBuildFile; fileRef = C79DE8B72CA2603B0006B790 /* Notification+Name.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +34,8 @@
 		C79DE8AD2C9FD0F50006B790 /* URLPreview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLPreview.swift; sourceTree = "<group>"; };
 		C79DE8AF2C9FD2C40006B790 /* URLPreview.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = URLPreview.xib; sourceTree = "<group>"; };
 		C79DE8B12C9FD60E0006B790 /* DebugHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DebugHelper.swift; sourceTree = "<group>"; };
+		C79DE8B52CA25B710006B790 /* URLPreviewData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = URLPreviewData.swift; sourceTree = "<group>"; };
+		C79DE8B72CA2603B0006B790 /* Notification+Name.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Notification+Name.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,8 +68,10 @@
 		C79DE8922C9AD4900006B790 /* self understanding */ = {
 			isa = PBXGroup;
 			children = (
+				C79DE8B52CA25B710006B790 /* URLPreviewData.swift */,
 				C79DE8932C9AD4900006B790 /* AppDelegate.swift */,
 				C79DE8952C9AD4900006B790 /* SceneDelegate.swift */,
+				C79DE8B72CA2603B0006B790 /* Notification+Name.swift */,
 				C79DE8972C9AD4900006B790 /* ViewController.swift */,
 				C79DE8992C9AD4900006B790 /* Main.storyboard */,
 				C79DE89C2C9AD4930006B790 /* Assets.xcassets */,
@@ -151,10 +157,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C79DE8B62CA25B710006B790 /* URLPreviewData.swift in Sources */,
 				C79DE8AC2C9FC56E0006B790 /* UIView+fromNib.swift in Sources */,
 				C79DE8982C9AD4900006B790 /* ViewController.swift in Sources */,
 				C79DE8942C9AD4900006B790 /* AppDelegate.swift in Sources */,
 				C79DE8AE2C9FD0F60006B790 /* URLPreview.swift in Sources */,
+				C79DE8B82CA2603B0006B790 /* Notification+Name.swift in Sources */,
 				C79DE8962C9AD4900006B790 /* SceneDelegate.swift in Sources */,
 				C79DE8B22C9FD60E0006B790 /* DebugHelper.swift in Sources */,
 			);
